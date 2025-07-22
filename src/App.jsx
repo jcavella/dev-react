@@ -2,6 +2,7 @@ import Counter from './componets/Counter';
 import ToggleButton from './componets/ToggleButton';
 import NameForm from './componets/NameForm';
 import CounterWithEffect  from './componets/CounterWithEffect';
+import Card from './componets/Card/Card';
 import './App.css'
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
       <hr />
       <h2>Contador con UsseEfect</h2>
       <CounterWithEffect></CounterWithEffect>
+      <hr />
+      <h2>Componente con archivo Css</h2>
+      <Card></Card>
     </>
   )
 }
