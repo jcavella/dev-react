@@ -3,6 +3,7 @@ import ToggleButton from './componets/ToggleButton';
 import NameForm from './componets/NameForm';
 import CounterWithEffect  from './componets/CounterWithEffect';
 import Card from './componets/Card/Card';
+import TextTailwin from './componets/TextTailwin'
 import './App.css'
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
       <hr />
       <h2>Componente con archivo Css</h2>
       <Card></Card>
+      <hr />
+      <h2>Componente utilzando Tailwind Css</h2>
+      <TextTailwin></TextTailwin>
     </>
   )
 }
