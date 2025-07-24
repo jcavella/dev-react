@@ -4,11 +4,15 @@ import NameForm from './componets/NameForm';
 import CounterWithEffect  from './componets/CounterWithEffect';
 import Card from './componets/Card/Card';
 import TextTailwin from './componets/TextTailwin'
+import ConponentStatic from './componets/ConponentStatic'
 import './App.css'
 
 function App() {
   return (
     <>
+      <ConponentStatic></ConponentStatic>
+      <hr />
+
       <Counter></Counter>
       <hr />
       <ToggleButton></ToggleButton>
