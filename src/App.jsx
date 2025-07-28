@@ -5,11 +5,14 @@ import CounterWithEffect  from './componets/CounterWithEffect';
 import Card from './componets/Card/Card';
 import TextTailwin from './componets/TextTailwin'
 import ConponentStatic from './componets/ConponentStatic'
+import UserListApi from './componets/UserlistAPI'
 import './App.css'
 
 function App() {
   return (
     <>
+     <UserListApi></UserListApi>
+     <hr />
       <ConponentStatic></ConponentStatic>
       <hr />
 
