@@ -18,7 +18,7 @@ const UserListApi= () =>{
         <div className="grid grid-cols-3 gap-6">
         <ul>            
             {users.map((user) => (
-                <li class ="pl-25" key={user.id} className="border dark:border-white border-indigo-400 p-3 rounded-lg">{user.name}
+                <li key={user.id} className="border dark:border-white border-indigo-400 p-3 rounded-lg">{user.name}
                   <p className ="pl-4">Correo: {user.email}</p>                
                   <p className ="pl-4">Telefono: {user.phone}</p>                
                   <p className ="pl-4">Ciudad: {user.address.city}</p>                

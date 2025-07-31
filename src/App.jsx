@@ -6,11 +6,19 @@ import Card from './componets/Card/Card';
 import TextTailwin from './componets/TextTailwin'
 import ConponentStatic from './componets/ConponentStatic'
 import UserListApi from './componets/UserlistAPI'
+import UserlistAPILoading from './componets/UserlistAPILoading'
+import SearchPost from './componets/SearchPost/SearchPost'
 import './App.css'
 
 function App() {
   return (
     <>
+     <SearchPost></SearchPost>
+     <br />
+    <hr />
+
+      <UserlistAPILoading></UserlistAPILoading>
+    <hr />
      <UserListApi></UserListApi>
      <hr />
       <ConponentStatic></ConponentStatic>
