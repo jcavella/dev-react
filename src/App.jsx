@@ -8,11 +8,15 @@ import ConponentStatic from './componets/ConponentStatic'
 import UserListApi from './componets/UserlistAPI'
 import UserlistAPILoading from './componets/UserlistAPILoading'
 import SearchPost from './componets/SearchPost/SearchPost'
+import CounterUseReducer from './componets/CounterUseReducer/CounterUseReducer'
 import './App.css'
 
 function App() {
   return (
     <>
+    <h1>Counter useReducer</h1>
+    <CounterUseReducer></CounterUseReducer>
+    <hr />
      <SearchPost></SearchPost>
      <br />
     <hr />
