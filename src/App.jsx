@@ -1,3 +1,5 @@
+import { useContext, createContext, useState } from 'react';
+
 import Counter from './componets/Counter';
 import ToggleButton from './componets/ToggleButton';
 import NameForm from './componets/NameForm';
@@ -11,9 +13,48 @@ import SearchPost from './componets/SearchPost/SearchPost'
 import CounterUseReducer from './componets/CounterUseReducer/CounterUseReducer'
 import './App.css'
 
+//Crear variable con el contexto
+const ThemeContext = createContext();
+
+function ThemeProvider({children}) {
+  const[theme, setTheme] = useState("dark");
+
+  const toggleTheme = ()=>{
+    setTheme((prevTheme)=>(prevTheme === "light" ? "dark" : "light"))
+  };
+
+  return(
+    <ThemeContext.Provider value={{theme,toggleTheme}}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+function ThemeButton() {
+  const{theme, toggleTheme} = useContext(ThemeContext)
+
+  return(
+    <button
+     onClick={toggleTheme}
+     style={{
+      backgroundColor: theme === "light" ? "#ffffff" : "#333333",
+      color: theme === "light" ? "#000000" : "#ffffff"
+     }}
+    >Cambiar tema
+    </button>
+  )
+}
+
 function App() {
   return (
     <>
+    <h1>Context API</h1>
+    <ThemeProvider>
+      <div className='App'>
+        <ThemeButton />
+
+      </div>
+      <hr />
     <h1>Counter useReducer</h1>
     <CounterUseReducer></CounterUseReducer>
     <hr />
@@ -43,6 +84,8 @@ function App() {
       <hr />
       <h2>Componente utilzando Tailwind Css</h2>
       <TextTailwin></TextTailwin>
+    </ThemeProvider>
+    
     </>
   )
 }
