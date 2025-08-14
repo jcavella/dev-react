@@ -1,5 +1,7 @@
 import { useContext, createContext, useState } from 'react';
 
+import CounterWithCstomHook from './componets/CounterWithCstomHook/CounterWithCstomHook'
+
 import Counter from './componets/Counter';
 import ToggleButton from './componets/ToggleButton';
 import NameForm from './componets/NameForm';
@@ -48,6 +50,10 @@ function ThemeButton() {
 function App() {
   return (
     <>
+     <CounterWithCstomHook>
+
+     </CounterWithCstomHook>
+     <hr />
     <h1>Context API</h1>
     <ThemeProvider>
       <div className='App'>
@@ -68,6 +74,7 @@ function App() {
      <hr />
       <ConponentStatic></ConponentStatic>
       <hr />
+      <h1>Contador</h1>
 
       <Counter></Counter>
       <hr />
